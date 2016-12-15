@@ -1,7 +1,7 @@
 /**
  * Created by sampathr on 14/12/16.
  */
-public class InsertionSort {
+public class InsertionSortImpl1 {
     public static <T extends Comparable<T>> void sort(T[] array) {
         for (int i = 1; i < array.length; i++) {
             T item = array[i];

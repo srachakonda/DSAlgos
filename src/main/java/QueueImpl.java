@@ -1,7 +1,7 @@
 /**
  * Created by sampathr on 14/12/16.
  */
-public class QueueDemo {
+public class QueueImpl {
     private static final int capacity = 10;
     int arr[] = new int[capacity];
     int top = -1;
@@ -39,7 +39,7 @@ public class QueueDemo {
     }
 
     public static void main(String[] args) {
-        QueueDemo queueDemo = new QueueDemo();
+        QueueImpl queueDemo = new QueueImpl();
         queueDemo.pop();
         queueDemo.push(23);
         queueDemo.push(2);

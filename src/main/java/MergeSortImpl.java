@@ -1,7 +1,7 @@
 /**
  * Created by sampathr on 12/12/16.
  */
-public class MergeSort {
+public class MergeSortImpl {
     /*
    Time Complexity and Space Complexity:
    Best: O(nlogn)
@@ -15,7 +15,7 @@ public class MergeSort {
 
     public static void main(String a[]){
         int[] inputArr = {7, 5, 2, 4, 3, 5, 9};
-        MergeSort mms = new MergeSort();
+        MergeSortImpl mms = new MergeSortImpl();
         mms.sort(inputArr);
         for(int i:inputArr){
             System.out.print(i);

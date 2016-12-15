@@ -1,7 +1,7 @@
 /**
  * Created by sampathr on 14/12/16.
  */
-class CountingSort {
+class CountingSortImpl {
     public int[] sort(int[] arr) {
         int[] Result = new int[arr.length + 1];
         int[] Count = new int[arr.length + 1];
@@ -43,7 +43,7 @@ class CountingSort {
     }
 
     public static void main(String args[]) {
-        CountingSort ob = new CountingSort();
+        CountingSortImpl ob = new CountingSortImpl();
         int arr[] = { 1,4,1,2,7,5,2};
         printArr(arr);
         int[] resultArr =ob.sort(arr);

@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
  * Created by sampathr on 13/12/16.
  */
-class RadixSort {
+class RadixSortImpl {
     static int getMax(int arr[], int n)
     {
         int mx = arr[0];

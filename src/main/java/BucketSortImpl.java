@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Created by sampathr on 14/12/16.
  */
-public class BucketSort {
+public class BucketSortImpl {
     private static final int DEFAULT_BUCKET_SIZE = 5;
 
     public static void sort(Integer[] array) {
@@ -44,7 +44,7 @@ public class BucketSort {
         for (int i = 0; i < buckets.size(); i++) {
             Integer[] bucketArray = new Integer[buckets.get(i).size()];
             bucketArray = buckets.get(i).toArray(bucketArray);
-            InsertionSort.sort(bucketArray);
+            InsertionSortImpl1.sort(bucketArray);
             for (int j = 0; j < bucketArray.length; j++) {
                 array[currentIndex++] = bucketArray[j];
             }

@@ -1,7 +1,7 @@
 /**
  * Created by sampathr on 12/12/16.
  */
-public class QuickSortJ {
+public class QuickSortImpl {
     private int array[];
     private int length;
 
@@ -55,7 +55,7 @@ public class QuickSortJ {
 
     public static void main(String a[]){
 
-        QuickSortJ sorter = new QuickSortJ();
+        QuickSortImpl sorter = new QuickSortImpl();
         int[] input = {7,5,2,4,3,9,8};
         sorter.sort(input);
         for(int i:input){

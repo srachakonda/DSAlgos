@@ -1,7 +1,7 @@
 /**
  * Created by sampathr on 12/12/16.
  */
-public class SelecionSortJ {
+public class SelecionSortImpl {
 
     /*
    Time Complexity and Space Complexity:

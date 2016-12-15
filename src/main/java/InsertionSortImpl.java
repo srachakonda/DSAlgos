@@ -1,7 +1,7 @@
 /**
  * Created by sampathr on 12/12/16.
  */
-public class InsertionSortJ {
+public class InsertionSortImpl {
 
     /*
     Time Complexity and Space Complexity:

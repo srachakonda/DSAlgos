@@ -4,10 +4,10 @@ import java.util.PriorityQueue;
 /**
  * Created by sampathr on 14/12/16.
  */
-class PriorityQueueDemo {
+class PriorityQueueImpl {
     public static void main(String args[]) {
 
-        PriorityQueue<String> queue = new PriorityQueue<String>();
+        java.util.PriorityQueue<String> queue = new java.util.PriorityQueue<String>();
         queue.add("Amit");
         queue.add("Vijay");
         queue.add("Karan");

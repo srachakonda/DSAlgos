@@ -1,10 +1,10 @@
 /**
  * Created by sampathr on 13/12/16.
  */
-public class HeapSortJ {
+public class HeapSortImpl {
     public static void main(String[] args) {
         int[] array = new int[]{7, 5, 2, 4, 3, 9, 8};
-        new HeapSortJ().sort(array);
+        new HeapSortImpl().sort(array);
         for (int i : array) {
             System.out.print(i + " ");
         }
