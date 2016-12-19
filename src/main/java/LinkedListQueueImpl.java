@@ -1,73 +1,87 @@
 /**
  * Created by sampathr on 14/12/16.
  */
-import java.io.*;
-class Node{
+
+class Node {
     public int item;
     public Node next;
-    public Node(int val){
+
+    public Node(int val) {
         item = val;
     }
-    public void displayNode(){
+
+    public void displayNode() {
         System.out.print("[" + item + "]");
     }
 }
-class LinkedList{
+
+class LinkedList {
     private Node start;
     private Node end;
-    public LinkedList(){
+
+    public LinkedList() {
         start = null;
         end = null;
     }
-    public boolean isEmpty(){
-        return start==null;
+
+    public boolean isEmpty() {
+        return start == null;
     }
-    public void insertEnd(int val){//Insert node at the end of list
+
+    public void insertEnd(int val) {//Insert node at the end of list
         Node newNode = new Node(val);
-        if( isEmpty() )
+        if (isEmpty())
             start = newNode;
         else
             end.next = newNode;
         end = newNode;
     }
-    public int deleteStart(){//delete the node from the beginning of the list
+
+    public int deleteStart() {//delete the node from the beginning of the list
         int temp = start.item;
-        if(start.next == null)
+        if (start.next == null)
             end = null;
         start = start.next;
         return temp;
     }
-    public void displayList(){
+
+    public void displayList() {
         Node current = start;
-        while(current != null)
-        {
+        while (current != null) {
             current.displayNode();
             current = current.next;
         }
         System.out.println("");
     }
 }
-class Queue{
+
+class Queue {
     private LinkedList listObj;
-    public Queue(){
+
+    public Queue() {
         listObj = new LinkedList();
     }
-    public boolean isEmpty(){
+
+    public boolean isEmpty() {
         return listObj.isEmpty();
     }
-    public void insert(int k){
+
+    public void insert(int k) {
         listObj.insertEnd(k);
     }
-    public int delete(){
+
+    public int delete() {
         return listObj.deleteStart();
     }
-    public void display(){
+
+    public void display() {
         System.out.print("Queue [start to end]: ");
         listObj.displayList();
     }
 }
-class ListQueueBlog{
-    public static void main(String[] args){
+
+class ListQueueBlog {
+    public static void main(String[] args) {
         Queue demo = new Queue();
         System.out.println("Inserting two elements into the queue");
         demo.insert(10);
