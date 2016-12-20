@@ -15,7 +15,7 @@ public class InsertionSortImpl {
         for (int j = 1; j < len; j++) {
             int key = array[j];
             int i = j - 1;
-            while ((i > -1) && (array[i] > key)) {
+            while ((i > -1) && array[i] > key) {
                 array[i + 1] = array[i];
                 i--;
             }
