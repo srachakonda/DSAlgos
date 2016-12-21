@@ -10,19 +10,19 @@ public class HeapSortImpl {
         }
     }
 
-    public void sort(int data[]) {
-        int size = data.length;
+    public void sort(int arr[]) {
+        int size = arr.length;
         for (int i = size / 2 - 1; i >= 0; i--) {
-            heapify(i, data, size);
+            heapify(i, arr, size);
         }
-        for (int i = data.length - 1; i >= 0; i--) {
-            int temp = data[0];
-            data[0] = data[i];
-            data[i] = temp;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
             //reduce the heap window by 1
             size = size - 1;
             //call max heapify on the reduced heap
-            heapify(0, data, size);
+            heapify(0, arr, size);
         }
     }
 
@@ -34,24 +34,24 @@ public class HeapSortImpl {
         return 2 * i + 2;
     }
 
-    private void heapify(int i, int[] data, int size) {
+    private void heapify(int i, int[] arr, int size) {
         int largestElementIndex = i;
 
         int leftChildIndex = leftChild(i);
-        if (leftChildIndex < size && data[leftChildIndex] > data[largestElementIndex]) {
+        if (leftChildIndex < size && arr[leftChildIndex] > arr[largestElementIndex]) {
             largestElementIndex = leftChildIndex;
         }
         int rightChildIndex = rightChild(i);
-        if (rightChildIndex < size && data[rightChildIndex] > data[largestElementIndex]) {
+        if (rightChildIndex < size && arr[rightChildIndex] > arr[largestElementIndex]) {
             largestElementIndex = rightChildIndex;
         }
         if (largestElementIndex != i) {
-            int swap = data[i];
-            data[i] = data[largestElementIndex];
-            data[largestElementIndex] = swap;
+            int swap = arr[i];
+            arr[i] = arr[largestElementIndex];
+            arr[largestElementIndex] = swap;
 
             // Recursively heapify the affected sub-tree
-            heapify(largestElementIndex, data, size);
+            heapify(largestElementIndex, arr, size);
         }
     }
 }

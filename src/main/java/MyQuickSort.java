@@ -1,11 +1,13 @@
 /**
- * Created by sampathr on 12/12/16.
+ * Created by sampathr on 20/12/16.
  */
-public class QuickSortImpl {
+public class MyQuickSort {
+
     private int array[];
     private int length;
 
     public void sort(int[] inputArr) {
+
         if (inputArr == null || inputArr.length == 0) {
             return;
         }
@@ -15,11 +17,13 @@ public class QuickSortImpl {
     }
 
     private void quickSort(int lowerIndex, int higherIndex) {
+
         int i = lowerIndex;
         int j = higherIndex;
         // calculate pivot number, I am taking pivot as middle index number
         int pivot = array[lowerIndex+(higherIndex-lowerIndex)/2];
         // Divide into two arrays
+//        int pivot= array[0];
         while (i <= j) {
             /**
              * In each iteration, we will identify a number from left side which
@@ -53,12 +57,12 @@ public class QuickSortImpl {
         array[j] = temp;
     }
 
-    public static void main(String a[]) {
+    public static void main(String a[]){
 
-        QuickSortImpl sorter = new QuickSortImpl();
-        int[] input = {7, 5, 2, 4, 3, 9, 8};
+        MyQuickSort sorter = new MyQuickSort();
+        int[] input ={7, 5, 2, 4, 3, 9, 8};
         sorter.sort(input);
-        for (int i : input) {
+        for(int i:input){
             System.out.print(i);
             System.out.print(" ");
         }
