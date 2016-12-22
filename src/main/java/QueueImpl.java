@@ -2,13 +2,13 @@
  * Created by sampathr on 14/12/16.
  */
 public class QueueImpl {
-    private static final int capacity = 10;
-    int arr[] = new int[capacity];
+    private static final int len = 10;
+    int arr[] = new int[len];
     int top = -1;
     int rear = 0;
 
     public void push(int pushedElement) {
-        if (top < capacity - 1) {
+        if (top < len - 1) {
             arr[++top] = pushedElement;
             System.out.println("Element " + pushedElement
                     + " is pushed to Queue !");

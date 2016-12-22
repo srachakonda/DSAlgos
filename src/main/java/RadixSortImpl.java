@@ -69,7 +69,7 @@ class RadixSortImpl {
     /*Driver function to check for above function*/
     public static void main (String[] args)
     {
-        int[] arr = new int[]{7, 5, 2, 4, 3, 9, 8};
+        int[] arr = new int[]{170, 45, 75, 90, 802, 2};
         int n = arr.length;
         radixsort(arr, n);
         print(arr, n);

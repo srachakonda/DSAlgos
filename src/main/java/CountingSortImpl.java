@@ -3,12 +3,9 @@
  */
 class CountingSortImpl {
     public int[] sort(int[] arr) {
-        int[] Result = new int[arr.length + 1];
+        int[] Result = new int[arr.length+1];
         int[] Count = new int[arr.length + 1];
 
-        for (int i = 0; i < Count.length; i++) {
-            Count[i] = 0; // put count for every element as 0
-        }
         // Count[] will store the counts of each integer in the given array
         for (int i = 0; i < arr.length; i++) {
             int x = Count[arr[i]];
@@ -35,7 +32,7 @@ class CountingSortImpl {
         return Result;
     }
 
-    public static void printArr(int arr[]){
+    public static void printArr(int arr[]) {
         for (int i = 0; i < arr.length; ++i) {
             System.out.print(arr[i]);
             System.out.print(" ");
@@ -44,9 +41,9 @@ class CountingSortImpl {
 
     public static void main(String args[]) {
         CountingSortImpl ob = new CountingSortImpl();
-        int arr[] = { 1,4,1,2,7,5,2};
+        int arr[] = {1, 4, 1, 2, 7, 5, 2};
         printArr(arr);
-        int[] resultArr =ob.sort(arr);
+        int[] resultArr = ob.sort(arr);
         System.out.println();
         System.out.println("Array after sort: ");
         printArr(resultArr);
