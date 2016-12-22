@@ -1,5 +1,5 @@
-import java.util.Queue;
 import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Created by sampathr on 16/12/16.
@@ -17,14 +17,15 @@ public class BTTraversal {
         addNode(rootNode, 75);
         addNode(rootNode, 15);
         addNode(rootNode, 35);
-        System.out.println("Pre-Order Traversal: " );
+        System.out.println("Pre-Order Traversal: ");
         preOrderTraversal(rootNode);
-        System.out.println("\nIn-Order Traversal: " );
+        System.out.println("\nIn-Order Traversal: ");
         inOrderTraversal(rootNode);
-        System.out.println("\nPost-Order Traversal: " );
+        System.out.println("\nPost-Order Traversal: ");
         postOrderTraversal(rootNode);
-        System.out.println("\nBreadth First Traversal/ Level Order Traversal: " );
+        System.out.println("\nBreadth First Traversal/ Level Order Traversal: ");
         levelOrderTraversal(rootNode);
+        System.out.println("Height of Binary Tree: " + heightOfBinaryTree(rootNode));
     }
 
     public void addNode(Node1 rootNode, int data) {
@@ -54,8 +55,8 @@ public class BTTraversal {
         }
     }
 
-    public void preOrderTraversal(Node1 rootNode){
-        if(rootNode == null){
+    public void preOrderTraversal(Node1 rootNode) {
+        if (rootNode == null) {
             return;
         }
         System.out.print(rootNode.getData() + " ");
@@ -63,8 +64,8 @@ public class BTTraversal {
         preOrderTraversal(rootNode.getRight());
     }
 
-    public void inOrderTraversal(Node1 rootNode){
-        if(rootNode == null){
+    public void inOrderTraversal(Node1 rootNode) {
+        if (rootNode == null) {
             return;
         }
         inOrderTraversal(rootNode.getLeft());
@@ -72,8 +73,8 @@ public class BTTraversal {
         inOrderTraversal(rootNode.getRight());
     }
 
-    public void postOrderTraversal(Node1 rootNode){
-        if(rootNode == null){
+    public void postOrderTraversal(Node1 rootNode) {
+        if (rootNode == null) {
             return;
         }
         postOrderTraversal(rootNode.getLeft());
@@ -81,21 +82,30 @@ public class BTTraversal {
         System.out.print(rootNode.getData() + " ");
     }
 
-    public void levelOrderTraversal(Node1 rootNode){
-
+    public void levelOrderTraversal(Node1 rootNode) {
         if (rootNode == null)
             return;
-
         Queue<Node1> queue = new LinkedList<Node1>();
         queue.add(rootNode);
 
-        while (! queue.isEmpty()){
+        while (!queue.isEmpty()) {
             Node1 obj = queue.poll();
             System.out.print(obj.getData() + " ");
-            if(obj.getLeft()!=null)
+            if (obj.getLeft() != null)
                 queue.add(obj.getLeft());
-            if (obj.getRight()!= null)
+            if (obj.getRight() != null)
                 queue.add(obj.getRight());
+        }
+    }
+
+
+    public int heightOfBinaryTree(Node1 node) {
+        if (node == null) {
+            return 0;
+        } else {
+            return 1 +
+                    Math.max(heightOfBinaryTree(node.getLeft()),
+                            heightOfBinaryTree(node.getRight()));
         }
     }
 }
