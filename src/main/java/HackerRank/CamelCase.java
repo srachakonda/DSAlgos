@@ -8,10 +8,12 @@ import java.util.Scanner;
 public class CamelCase {
     public static void main(String[] args)
     {
-        Scanner input = new Scanner(System.in);
-        String inputStr = input.nextLine();
+//        Scanner input = new Scanner(System.in);
+//        String inputStr = input.nextLine();
+        String inputStr = "saveChangesInTheEditor";
         int countOfStrs = 0;
-        for (String w : inputStr.split("(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])")) {
+        for (String inputData : inputStr.split("(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])")) {
+
             ++countOfStrs;
         }
         System.out.println(countOfStrs);
