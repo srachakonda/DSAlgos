@@ -38,7 +38,7 @@ public class AndXorOr {
         System.out.println(maxResult);
 //        System.out.println("fdf  " + (long)(87864180 ^ 65564584) );
     }
-
+//⁠⁠⁠8102866839
     public static void main(String[] args) {
         /*Scanner scanner = new Scanner(System.in);
         int arrLen = scanner.nextInt();
