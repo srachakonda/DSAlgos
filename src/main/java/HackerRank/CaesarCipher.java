@@ -16,7 +16,7 @@ public class CaesarCipher {
                 currentVal += cipherCode;
                 if (currentVal > 90 && currentVal < 97) {
                     int diff = currentVal - 122;
-                    while (diff>10){
+                    while (diff>26){
 
                     }
                     currentVal = 64 + diff;
