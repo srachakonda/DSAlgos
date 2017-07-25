@@ -27,6 +27,11 @@ public class MarsExploration {
                         //Do Nothing
                     } else {
                         count++;
+                        /*
+                        4336620032742498
+01/22
+511
+                         */
                     }
                 }
             }

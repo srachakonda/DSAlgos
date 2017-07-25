@@ -6,7 +6,6 @@ package HackerRank;
 public class CaesarCipher {
 
     public static void caesarCipher(String str, int cipherCode) {
-
         char[] inputStrCharArray = str.toCharArray();
         char[] outputArray = new char[inputStrCharArray.length];
         for (int i = 0; i < inputStrCharArray.length; i++) {
@@ -16,7 +15,8 @@ public class CaesarCipher {
                 currentVal += cipherCode;
                 if (currentVal > 90 && currentVal < 97) {
                     int diff = currentVal - 122;
-                    while (diff>26){
+                    while (diff > 26) {
+                        //9711701871
 
                     }
                     currentVal = 64 + diff;
@@ -38,7 +38,6 @@ public class CaesarCipher {
         }
         for (char c : outputArray) {
             System.out.print(c);
-
         }
     }
 
